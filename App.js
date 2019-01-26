@@ -28,7 +28,7 @@ export default class App extends React.Component {
   }
 
   handleClickMessage = () => {
-    Alert.alert("Message", this.state.value);
+    Alert.alert("Input Message", this.state.value);
   }
 
   render() {
@@ -36,6 +36,8 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         <Text style={styles.title}>hello-goodbye-react-native-v1</Text>
+
+        <Text>Input:</Text>
 
         <TextInput
           style={{width: 300, height: 40, borderColor: 'gray', borderWidth: 1, padding: 10}}
