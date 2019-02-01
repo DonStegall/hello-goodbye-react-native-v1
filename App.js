@@ -31,6 +31,10 @@ export default class App extends React.Component {
     Alert.alert("Input Message", this.state.value);
   }
 
+  handleClickClear = () => {
+    this.setState({value: ''});
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -66,6 +70,11 @@ export default class App extends React.Component {
         <Button
           title="Show Input Message"
           onPress={this.handleClickMessage}
+          disabled={!this.state.value} />
+
+        <Button
+          title="Clear Input Message"
+          onPress={this.handleClickClear}
           disabled={!this.state.value} />
 
       </View>
